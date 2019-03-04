@@ -21,8 +21,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.popular_shows
-    self.all.each do |shows|
-      shows.where("rating >?", 5)
+      self.where("rating >?", 5)
     end
   end
 
